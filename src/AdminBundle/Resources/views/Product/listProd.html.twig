@@ -1,0 +1,39 @@
+<tr> <a href="{{ path("admin_prod_add") }}">Add New Product</a>. </tr>
+
+<table border="1">
+    <td>ID   </td> <td>Name </td><td>Description </td> <td> Category  </td>
+    <tr>
+
+
+        {% for product in productLis %}
+
+    <tr>
+        <td>{{ product.id }} </td>
+        <td>{{ product.title }} </td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.category }}</td>
+
+
+        <td>   <a href="{{ path("admin_prod_dell",{id:product.id}) }}">  Dell  </a>. </td>
+        <td>   <a href="{{ path("admin_prod_edit",{id:product.id}) }}">  Edit  </a>. </td>
+        <td>    <a href="{{ path("admin_productPhoto", {id:product.id}) }}">  Add Foto </a>.</td>
+        <td>   <a href="{{ path("admin_productListPhoto", {id:product.getId()}) }}"> List Foto</a>.  </td>
+        <td>   <a href="{{ path("admin_productPhotoIcon", {id:product.getId()}) }}"> Add Icon</a>.  </td>
+
+    </tr>
+
+
+    {% endfor %}
+
+
+
+</table>
+<div class="navigation">
+    {{ knp_pagination_render(productLis) }}
+</div>
+
+<br>
+<tr> <a href="{{ path("admin_cat_list") }}">Category List</a>. </tr> <br>
+<tr> <a href="{{ path("default_show",{id:1}) }}">Product for user </a>. </tr>
+
+

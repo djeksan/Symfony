@@ -1,0 +1,38 @@
+
+
+#
+#default_registr:
+#    path:     /stud/reg/{first}/{last}
+#    defaults: { _controller: DefaultBundle:Stud:registr }
+#default_show:
+#    path:     /show
+#    defaults: { _controller: DefaultBundle:Default:show }
+
+
+
+default_name:
+    path:     /{page}
+    defaults: { _controller: DefaultBundle:Default:showProduct, page: 1}
+    requirements:
+          page: \d+
+
+
+default_show:
+    path:     /product/{id}
+    defaults: {_controller: DefaultBundle:Default:showProduct}
+    methods: [GET]
+    requirements:
+      id: \d+
+
+
+default_cat:
+    path:     /category/create
+    defaults: { _controller: DefaultBundle:Default:createCotegory }
+
+
+
+
+
+default_rest:
+  path: /api/rest/product/{id}.jsone
+  defaults: { _controller: DefaultBundle:API/REST/Product:detail }

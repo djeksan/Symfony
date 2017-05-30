@@ -1,0 +1,13 @@
+
+
+
+{% block body %}
+
+    {{ product.title }}
+    <h1> Доьбавить Иконку к Товару </h1>
+    <form enctype="multipart/form-data" method="POST" action="{{ path("admin_productPhotoIcon", {id:product.id}) }}">
+        {{ form_widget(form) }}
+        <input type="submit" value="adsd" />
+</form>
+
+{% endblock %}

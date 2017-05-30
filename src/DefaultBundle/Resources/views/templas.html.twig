@@ -1,0 +1,150 @@
+
+<html>
+<head>
+    <title>Baby Shop</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/default/style.css') }}" />
+
+</head>
+
+<body>
+<div>
+    <a href="#"><img src="{{ asset('images/logo.gif') }}" width="237" height="123" class="float" alt="setalpm" /></a>
+    <div class="topnav">
+        <span><strong>Welcome</strong> &nbsp;<a href="#">Log in</a> &nbsp; | &nbsp; <a href="#">Register</a></span>
+        <select>
+            <option>Type of Product</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+            <option>Clothing</option>
+            <option>Accessories</option>
+        </select>
+        <span>Language:</span> <a href="#"><img src="{{ asset('images/flag1.jpg') }}" alt="" width="21" height="13" /></a> <a href="#"><img src="{{ asset('images/flag2.jpg') }}" alt="" width="21" height="13" /></a> <a href="#"><img src="{{ asset('images/flag3.jpg') }}" alt="" width="21" height="13" /></a>
+    </div>
+    <ul id="menu">
+        <li><a href="{{ path("default_name") }}"> <img src="{{ asset('images/but1.gif') }}" alt="" width="110" height="32" /></a></li>
+        <li><a href="{{ path("default_show", {id:1})}}"> <img src="{{ asset('images/but2.gif') }}" alt="" width="110" height="32" /></a></li>
+        <li><a href="#"><img src="{{ asset('images/but3.gif') }}" alt="" width="110" height="32" /></a></li>
+        <li><a href="#"><img src="{{ asset('images/but4.gif') }}" alt="" width="110" height="32" /></a></li>
+        <li><a href="#"><img src="{{ asset('images/but5.gif') }}" alt="" width="110" height="32" /></a></li>
+        <li><a href="#"><img src="{{ asset('images/but6.gif') }}" alt="" width="110" height="32" /></a></li>
+    </ul>
+</div>
+<div id="content">																																																																																																																																																						<div class="inner_copy"><a href="http://www.bestfreetemplates.info/builders.php">http://www.bestfreetemplates.info/builders.php</a></div>
+    <div id="sidebar">
+        <div id="navigation">
+            <ul>
+                <li><a href="#">Home page</a></li>
+                <li><a href="#">New products</a></li>
+                <li><a href="#">All products</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">F.A.Q.</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <div id="cart" >
+
+                <strong>Shopping cart:</strong> <br /> 0 items
+
+            </div>
+        </div>
+        <div>
+            <img src="{{ asset('images/title1.gif') }}" alt="" width="233" height="41" /><br />
+            <ul class="categories">
+                <li><a href="#">Action Toys &amp; Figures</a></li>
+                <li><a href="#">Arts &amp; Crafts</a></li>
+                <li><a href="#">Discovery &amp; Learning</a></li>
+                <li><a href="#">Dolls &amp; Soft Toys</a></li>
+                <li><a href="#">Games &amp; Puzzles</a></li>
+                <li><a href="#">Collectibles</a></li>
+                <li><a href="#">Infant &amp; Preschool</a></li>
+                <li><a href="#">Novelty &amp; Virtual</a></li>
+                <li><a href="#">Outdoors</a></li>
+                <li><a href="#">TV &amp; Films</a></li>
+            </ul>
+            <img src="{{ asset('images/title2.gif') }}" alt="" width="233" height="41" /><br />
+            <div class="review">
+                <a href="#"><img src="{{ asset('images/pic1.jpg') }}" alt="" width="181" height="161" /></a><br />
+                <a href="#">Product 07</a><br />
+                <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna </p>
+                <img src="{{ asset('images/stars.jpg') }}" alt="" width="118" height="20" class="stars" />
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <img src="{{ asset('images/photo.jpg') }}" alt="" width="682" height="334" border="0" usemap="#Map" />
+        <br />
+        <div id="inside">
+            <img src="{{ asset('images/title3.gif') }}" alt="" width="159" height="15" /><br />
+            <div class="info">
+                <img src="{{ asset('images/pic2.jpg') }}" alt="" width="159" height="132" />
+                <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadip- scing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur. </p>
+                <a href="#" class="more"><img src="{{ asset('images/more.gif') }}" alt="" width="106" height="28" /></a>
+            </div>
+            <img src="{{ asset('images/title4.gif') }}" alt="" width="159" height="17" /><br />
+            <div id="items">
+
+                {% block body %}
+                {% endblock %}
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">																																																																																																																																<div class="inner_copy"><a href="https://www.entrepreneur.com/article/276921">https://www.entrepreneur.com/article/276921</a></div>
+    <img src="{{ asset('images/cards.jpg') }}" alt="" width="919" height="76" />
+    <ul>
+        <li><a href="#">Home page</a> |</li>
+        <li><a href="#">New Products</a> |</li>
+        <li><a href="#">All Products</a> |</li>
+        <li><a href="#">Reviews</a> |</li>
+        <li><a href="#">F.A.Q.</a> |</li>
+        <li><a href="#">Contacts</a></li>
+    </ul>
+    <p>Copyright &copy;. All rights reserved. Design by <a href="http://www.bestfreetemplates.info" title="Free CSS Templates" target="_blank" class="bft">BFT</a></p>
+</div>
+<map name="Map">
+    <area shape="rect" coords="16,306,159,326" href="#">
+</map>
+</body>
+</html>
+
+
+
+{#
+<html>
+<body>
+<head>
+
+    <link rel="stylesheet" href="{{ asset('bundles/default/main.css') }}">
+
+
+
+</head>
+<table border="1" style="width: 100%">
+<tr>
+    <td style="width: 400px">
+
+        <ul>
+            <li> <a href="{{ path("default_name") }}"> Addd</a> </li>
+            <li> <a href="{{ path("default_show", {id:1})}}"> Prodd</a> </li>
+        </ul>
+    </td>
+
+<td valign="top">
+ БАнер
+</td>
+</tr>
+
+</table>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>
+
+
+#}

@@ -1,0 +1,37 @@
+
+
+
+{% block body %}
+<h1> Доьбавить фото {{product.title }}</h1>
+
+
+<h3>фото к товару</h3>
+
+
+
+
+    <form enctype="multipart/form-data" method="POST" action="{{ path("admin_productPhoto",{id:product.id}) }}">
+
+        {{ form_widget(form) }}
+        <input type="submit" value="adsd" />
+</form>
+
+
+    <a href="{{ path('admin_prod_list') }}">To product</a>
+
+    {% for flash_message in app.session.flashBag.get('add_flash') %}
+        <div class="flash-notice">
+            {{ flash_message }}
+        </div>
+    {% endfor %}
+
+
+
+    {% for  flash_massage in app.session.flashBag.get('add_foto')%}
+
+
+    {% endfor %}
+
+
+
+{% endblock %}

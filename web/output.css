@@ -1,0 +1,9 @@
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+}
+table { width: 650px; }
+th { height: 100px; }
+p {text-align: left; text-indent: 3px;  }

@@ -1,0 +1,23 @@
+
+<tr> <a href="{{ path("admin_add") }}">Add New</a>. </tr>
+<table border="1">
+<tr>
+
+
+     {% for category in categoryLis %}
+    <tr>
+    <td>{{ category.id }} </td>
+    <td>{{ category.title }} </td>
+    <td>{{ category.description }}</td>
+    <td>   <a href="{{ path("admin_cat_dell",{id:category.id}) }}">Dell</a>. </td>
+        <td>   <a href="{{ path("admin_cat_edit",{id:category.id}) }}">Edit</a>. </td>
+    </tr>
+
+    {% endfor %}
+
+</tr>
+
+</table>
+<br>
+<a href="{{ path('admin_prod_list') }}">To product list</a> <br>
+<tr> <a href="{{ path("default_show",{id:1}) }}">Product from users</a>. </tr>

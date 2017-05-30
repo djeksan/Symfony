@@ -1,0 +1,16 @@
+
+
+
+{% block body %}
+
+<ul>
+{% for news in newsList %}
+<li>{{ news.title }}<br /> {{ news.description }}
+    {% endfor %}
+    </ul>
+
+
+
+
+
+{% endblock %}

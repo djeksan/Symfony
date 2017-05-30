@@ -1,0 +1,112 @@
+login:
+   path: /login
+   defaults: {_controller: AdminBundle:Login:login}
+
+admin_homepage:
+    path: /
+    defaults: { _controller: AdminBundle:Default:index }
+
+admin_add:
+    path: /category/add
+    defaults: { _controller: AdminBundle:Category:add}
+
+admin_cat_list:
+    path: /category/list
+    defaults: { _controller: AdminBundle:Category:listCat}
+
+
+admin_cat_dell:
+    path: /category/{id}/dell
+    defaults: { _controller: AdminBundle:Category:delet}
+    requirements:
+        id: \d+
+
+admin_cat_edit:
+    path: /category/{id}/edit
+    defaults: { _controller: AdminBundle:Category:edit}
+    requirements:
+        id: \d+
+
+
+admin_prod_add:
+    path: /product/add
+    defaults: { _controller: AdminBundle:Product:add}
+
+admin_prod_list:
+    path: /product/list/{page}
+    defaults: { _controller: AdminBundle:Product:listProd, page: 1}
+    requirements:
+      page: \d+
+
+
+admin_prod_dell:
+    path: /product/{id}/dell
+    defaults: { _controller: AdminBundle:Product:delet}
+    requirements:
+        id: \d+
+
+admin_prod_edit:
+    path: /product/{id}/edit
+    defaults: { _controller: AdminBundle:Product:edit}
+    requirements:
+        id: \d+
+
+
+admin_user_add:
+  path: /user/add
+  defaults: { _controller: AdminBundle:User:add}
+
+admin_user_list:
+  path: /user/list
+  defaults: {_controller: AdminBundle:User:UserList}
+
+
+
+admin_Brand_add:
+    path: /brand/add
+    defaults: { _controller: AdminBundle:Brand:add}
+admin_Brand_edit:
+    path: /brand/edit
+    defaults: { _controller: AdminBundle:Brand:edit}
+
+
+admin_productPhoto:
+    path: /product/{id}/photo/add
+    defaults: { _controller: AdminBundle:productPhoto:add}
+    requirements:
+      id: \d+
+
+admin_productListPhoto:
+    path: /product/{id}/photos
+    defaults: { _controller: AdminBundle:productPhoto:list}
+    requirements:
+      id: \d+
+
+
+admin_productPhotoIcon:
+    path: /product/{id}/photo/add/icon
+    defaults: { _controller: AdminBundle:productPhoto:addIcon}
+    requirements:
+      id: \d+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

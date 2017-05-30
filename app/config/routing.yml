@@ -1,0 +1,11 @@
+admin:
+    resource: "@AdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+logout:
+  path: logout
+
+default:
+    resource: "@DefaultBundle/Resources/config/routing.yml"
+    prefix:   /
+

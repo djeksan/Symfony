@@ -1,0 +1,28 @@
+
+{% extends "@Default/templas.html.twig" %}
+
+
+
+{% block body %}
+       <link rel="stylesheet" type="text/css" href="{{ asset('output.css') }}" />
+
+<table>
+
+    {% for product in productLis %}
+
+        <tr>   <th>   <img src="/icon/{{product.icon}}" /> </th>
+
+            <th> <p> {{ product.title }}
+              {{ "<br />" }}
+              {{ product.description }}
+             {{ product.descriptionFull }}</th> </p>
+          <th>{{ product.price}}$ </th>
+        </tr>
+    {% endfor %}
+
+</table>
+    <div class="navigation">
+        {{ knp_pagination_render(productLis) }}
+    </div>
+
+{% endblock %}

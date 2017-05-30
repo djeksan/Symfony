@@ -1,0 +1,23 @@
+
+<a href="{{ path("admin_user_add") }}">ADD Users</a>
+
+    <table border="1">
+        {% for user in UserList %}
+
+
+            <tr>
+                <td>{{ user.username }} </td>
+                <td>{{ user.email }}</td>
+            </tr>
+
+        {% endfor %}
+
+
+
+     </table>
+    <a href="{{ path("admin_homepage") }}">Admin Page</a></br>
+
+
+
+
+

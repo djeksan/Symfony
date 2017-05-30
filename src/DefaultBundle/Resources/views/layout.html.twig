@@ -1,0 +1,29 @@
+<html>
+<body>
+<head>
+
+    <link real="stelesheet" href="/web/main.css" />
+</head>
+<table border="1" style="width: 100%">
+<tr>
+    <td style="width: 400px">
+
+        <ul>
+            <li> <a href="{{ path("default_name") }}"> Addd</a> </li>
+            <li> <a href="{{ path("default_show", {id:1})}}"> Prodd</a> </li>
+        </ul>
+    </td>
+
+<td valign="top">
+ БАнер
+</td>
+</tr>
+
+</table>
+
+{% block body %}
+{% endblock %}
+
+
+</body>
+</html>

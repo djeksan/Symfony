@@ -1,0 +1,18 @@
+services:
+    servis_admin.check_img:
+        class: AdminBundle\ImgUtil\CheckImg
+        arguments:
+          - "%img_list_type%"
+
+
+    servis_admin.gener_name:
+        class: AdminBundle\ImgUtil\ImgNameGenerator
+
+
+    servis_admin.img_upload:
+        class: AdminBundle\ImgUtil\ImgUtil
+        arguments:
+            - "@servis_admin.check_img"
+            - "@servis_admin.gener_name"
+        calls:
+            - ["setUploadImgRootDir", ["%image_upload_dir%"]]
