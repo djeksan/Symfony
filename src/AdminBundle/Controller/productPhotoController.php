@@ -104,27 +104,7 @@ die();
      *
      */
 
-public function addIconAction(Request $request, $id)
-{
-    $manager = $this->getDoctrine()->getManager();
-    $product = $manager->getRepository("DefaultBundle:Product")->find($id);
 
-    $Icon=new Product();
-    $form=$this->createForm(ProductPhotoType::class,$Icon);
-    $form->handleRequest($request);
-    $filesArr=$request->files->get("defaultbundle_product");
-    $photoFile = $filesArr["potoFile"];
-
-
-    return [
-        "form" => $form->createView(),
-        "product" => $product
-    ];
-
-
-
-
-}
 
 
 

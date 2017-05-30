@@ -10,10 +10,14 @@
     <table>
 {% if product.id==true  %}
 
+    <img src="/icon/{{product.icon}}" /> </th>
+
         {% for photo in product.photos %}
 
+
+
             <a href="/photos/{{photo.getFilename()}}" />
-        <img src="/photos/{{photo.getSmalfileName()}}" />
+           <img src="/photos/{{photo.getSmalfileName()}}" />
 
             {{ product.title }}
         {% endfor %}
@@ -24,6 +28,9 @@
 
 <img src="/{{ asset('photos/noImg.gif') }}"  />
 
+
+
+    
 {% endif %}
 
 {% endblock %}

@@ -8,14 +8,24 @@
 
 <table>
 
+
+
+
     {% for product in productLis %}
 
-        <tr>   <th>   <img src="/icon/{{product.icon}}" /> </th>
+        <tr>
+            <th>
+                <a href="/details/{{product.id()}}">
+                <img src="/icon/{{product.icon}}" />
+            </th>
 
-            <th> <p> {{ product.title }}
+
+            <th>
+                <a href="/details/{{product.id()}}">
+                <p> {{ product.title }}
               {{ "<br />" }}
               {{ product.description }}
-             {{ product.descriptionFull }}</th> </p>
+             {{ product.descriptionFull }}</th> </p> </a>
           <th>{{ product.price}}$ </th>
         </tr>
     {% endfor %}

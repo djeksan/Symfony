@@ -17,6 +17,13 @@ default_name:
           page: \d+
 
 
+defaullt_details:
+  path: /details/{id}
+  defaults: { _controller: DefaultBundle:Default:showDt}
+  requirements:
+    id: \d+
+
+
 default_show:
     path:     /product/{id}
     defaults: {_controller: DefaultBundle:Default:showProduct}

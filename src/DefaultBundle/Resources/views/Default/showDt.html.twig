@@ -1,0 +1,31 @@
+
+
+{{ product.title }}
+
+   {{ "<br />" }}
+
+ {% for photo in product.photos %}
+
+     <a href="/photos/{{photo.getFilename()}}" />
+     <img src="/photos/{{photo.getSmalfileName()}}" /> </a>
+{{ product.price }}
+
+ {% endfor %}
+ {{ "<br />" }}
+
+{{ product.descriptionFull }}
+
+
+
+
+{% block body %}
+
+<ul>
+
+    </ul>
+
+
+
+
+
+{% endblock %}

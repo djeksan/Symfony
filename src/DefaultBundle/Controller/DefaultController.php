@@ -43,20 +43,14 @@ class DefaultController extends Controller
 
 
     /**
-     * @Template
+     * @Template()
     */
-    public function showNewsListAction()
+    public function showDtAction(Request $request, $id)
     {
-        $newsList=[
-            ["title"=> "Description of the network",
-            "description"=>" first ? last6 ? me,der"
-            ],
-            ["title"=> "Description of the apple",
-                "description"=>" dir , id code  image"
-            ]
-                  ];
+        $product = $this->getDoctrine()->getRepository("DefaultBundle:Product")->find($id);
+
         return [
-            'newsList'=> $newsList
+            'product'=> $product
                ];
     }
 
