@@ -1,5 +1,8 @@
+{% extends "@Admin/layout.html.twig" %}
 
+{% block body %}
 <a href="{{ path("admin_user_add") }}">ADD Users</a>
+{{ "</br >" }}
 
     <table border="1">
         {% for user in UserList %}
@@ -15,9 +18,10 @@
 
 
      </table>
-    <a href="{{ path("admin_homepage") }}">Admin Page</a></br>
 
+{{ "<br />" }}
 
+<tr> <a href="{{ path("admin_homepage") }}">Admin_panel</a>. </tr> <br>
 
-
+{% endblock %}
 

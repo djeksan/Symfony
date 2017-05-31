@@ -8,7 +8,7 @@
 
 <table>
 
-
+<th>
 
 
     {% for product in productLis %}
@@ -29,7 +29,7 @@
           <th>{{ product.price}}$ </th>
         </tr>
     {% endfor %}
-
+</th>
 </table>
     <div class="navigation">
         {{ knp_pagination_render(productLis) }}
